@@ -1,10 +1,8 @@
-import Sidebar from "./components/SideBar";
 import Header from "./components/Header";
 import EventCard from "./components/EventCard";
 
 const DashboardPage = () => (
   <div className="flex h-screen">
-    <Sidebar />
     <main className="flex-grow bg-gray-100">
       <Header title="Events" />
       <div className="p-6">

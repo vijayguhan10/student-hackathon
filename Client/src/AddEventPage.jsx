@@ -1,9 +1,7 @@
 import Header from "./components/Header";
-import Sidebar from "./components/SideBar";
 
 const AddEventPage = () => (
   <div className="flex h-screen">
-    <Sidebar />
     <main className="flex-grow bg-gray-100">
       <Header />
       <div className="p-6">

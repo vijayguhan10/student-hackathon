@@ -1,17 +1,18 @@
-import Sidebar from "./components/SideBar";
 import Header from "./components/Header";
 import EventCard from "./components/EventCard";
+import { Link } from "react-router-dom";
 
 const EventsPage = () => (
   <div className="flex h-screen">
-    <Sidebar />
     <main className="flex-grow bg-gray-100">
       <Header title="Events" />
       <div className="p-6">
         <div className="flex space-x-4 mb-4">
-          <button className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300">
-            + Event
-          </button>
+          <Link to="/events/addevent">
+            <button className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300">
+              + Event
+            </button>
+          </Link>
           <button className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300">
             + Hackathon
           </button>
