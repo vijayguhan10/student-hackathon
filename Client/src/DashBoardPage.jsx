@@ -6,7 +6,7 @@ const DashboardPage = () => (
     <main className="flex-grow bg-gray-100">
       <Header title="Events" />
       <div className="p-6">
-        <button className="mb-4 text-blue-500 hover:underline">
+        <button className="mb-4 text-black">
           &larr; Back
         </button>
         <div className="grid grid-cols-3 gap-6">
@@ -46,7 +46,7 @@ const DashboardPage = () => (
               />
               <span className="text-sm">+500</span>
             </div>
-            <button className="bg-yellow-500 text-white w-full px-4 py-2 rounded mt-4 hover:bg-yellow-600">
+            <button className="bg-yellow-500 text-black w-full px-4 py-2 rounded mt-4 hover:bg-yellow-600">
               Join Now
             </button>
           </div>
