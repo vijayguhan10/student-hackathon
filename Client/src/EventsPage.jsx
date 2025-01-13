@@ -6,17 +6,17 @@ const EventsPage = () => (
   <div className="flex h-screen">
     <main className="flex-grow bg-gray-100">
       <Header title="Events" />
-      <div className="p-6">
-        <div className="flex space-x-4 mb-4">
+      <div className="px-10 py-8">
+        <div className="flex space-x-4 mb-8">
           <Link to="/events/addevent">
-            <button className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300">
+            <button className="bg-white font-bold text-gray-500 border solid border-gray-500 py-3 px-8 rounded-xl hover:bg-gray-200">
               + Event
             </button>
           </Link>
-          <button className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300">
+          <button className="bg-white font-bold text-gray-500 border solid border-gray-500 py-3 px-8 rounded-xl hover:bg-gray-200">
             + Hackathon
           </button>
-          <button className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300">
+          <button className="bg-white font-bold text-gray-500 border solid border-gray-500 py-3 px-8 rounded-xl hover:bg-gray-200">
             + Internship
           </button>
         </div>
@@ -27,7 +27,7 @@ const EventsPage = () => (
               key={idx}
               title={`Hackathon 2024: Innovate & Inspire`}
               description={`Join us for a 48-hour innovation sprint where creativity meets technology.`}
-              date={`2gthr`}
+              location={`2gthr`}
               fee={`Free`}
             />
           ))}

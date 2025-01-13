@@ -5,7 +5,7 @@ const ReportsPage = () => (
   <div className="flex h-screen">
     <main className="flex-grow bg-gray-100">
       <Header />
-      <div className="p-6">
+      <div className="px-10 py-6">
         <h1 className="text-2xl font-bold mb-4">Reports</h1>
         <div className="grid grid-cols-3 gap-6">
           {[1, 2, 3, 4, 5, 6].map((_, idx) => (

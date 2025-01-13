@@ -31,13 +31,13 @@ const AddEventPage = () => {
     <div className="flex h-screen">
       <main className="flex-grow bg-gray-100">
         <Header />
-        <div className="p-6">
+        <div className="px-10 py-5">
           <div className="grid grid-cols-2 gap-6">
             <div className="bg-white p-6 shadow rounded-3xl">
               <form>
                 <div className="flex justify-between">
                   <h1 className="text-2xl font-bold mb-4">Add Event Details</h1>
-                  <div className="flex gap-2">
+                  <div className="flex gap-4">
                     <div className="rounded-full bg-gray-100 w-10 h-10 flex justify-center items-center">
                       <PencilIcon className="w-5 h-5" />
                     </div>
@@ -51,12 +51,12 @@ const AddEventPage = () => {
                 <input
                   type="text"
                   placeholder="Event Name"
-                  className="w-full bg-gray-50 text-black p-2 rounded-xl mb-4 border border-solid border-black placeholder:text-black"
+                  className="w-full bg-gray-50 text-gray-500 p-2 rounded-xl mt-4 mb-4 border border-solid border-gray-500 placeholder:text-gray-500 placeholder:pl-4"
                   required
                 />
                 <textarea
                   placeholder="Event Description"
-                  className="w-full h-32 bg-gray-50 text-black p-2 rounded-xl mb-4 border border-solid border-black placeholder:text-black"
+                  className="w-full h-32 bg-gray-50 text-gray-500 p-2 rounded-xl mb-4 border border-solid border-gray-500 placeholder:text-gray-500 placeholder:pl-4"
                   required
                 ></textarea>
                 <div className="relative mb-4">
@@ -64,7 +64,7 @@ const AddEventPage = () => {
                     type="datetime-local"
                     id="event-date-time"
                     onChange={handleDateTimeChange}
-                    className={`w-full p-2 bg-gray-50 rounded-xl border border-solid border-black ${
+                    className={`w-full p-2 bg-gray-50 text-gray-500 rounded-xl border border-solid border-gray-500 ${
                       !dateTime ? "appearance-none text-transparent" : ""
                     }`}
                     required
@@ -72,14 +72,14 @@ const AddEventPage = () => {
                   {!dateTime && (
                     <label
                       htmlFor="event-date-time"
-                      className="absolute left-2 top-2 text-black pointer-events-none"
+                      className="absolute left-2 top-2 text-gray-500 pointer-events-none ml-4"
                     >
                       Date & Time
                     </label>
                   )}
                 </div>
-                <div className="mb-4 flex justify-between w-full bg-gray-50 p-2 rounded-xl border border-solid border-black">
-                  <label className="mb-1">Membership</label>
+                <div className="mb-4 flex justify-between w-full bg-gray-50 p-2 rounded-xl border border-solid border-gray-500">
+                  <label className="mb-1 text-gray-500 ml-4">Mentorship</label>
                   <div className="flex h-7 bg-gray-200 rounded-md p-0.5 w-fit items-center">
                     <label className="cursor-pointer flex items-center">
                       <input
@@ -88,7 +88,7 @@ const AddEventPage = () => {
                         value="yes"
                         className="hidden peer"
                       />
-                      <div className="peer-checked:bg-white w-20 h-5 ml-1 bg-gray-200 text-black rounded-md px-4 py-1 flex justify-center items-center">
+                      <div className="peer-checked:bg-white w-20 h-5 ml-1 bg-gray-200 text-gray-500 rounded-md px-4 py-1 flex justify-center items-center">
                         Yes
                       </div>
                     </label>
@@ -99,7 +99,7 @@ const AddEventPage = () => {
                         value="no"
                         className="hidden peer"
                       />
-                      <div className="peer-checked:bg-white w-20 h-5 mr-1 bg-gray-200 text-black rounded-md px-4 py-1 flex justify-center items-center">
+                      <div className="peer-checked:bg-white w-20 h-5 mr-1 bg-gray-200 text-gray-500 rounded-md px-4 py-1 flex justify-center items-center">
                         No
                       </div>
                     </label>
@@ -108,18 +108,18 @@ const AddEventPage = () => {
                 <input
                   type="text"
                   placeholder="Location"
-                  className="w-full text-black bg-gray-50 p-2 rounded-xl mb-4 border border-solid border-black placeholder:text-black"
+                  className="w-full text-gray-500 bg-gray-50 p-2 rounded-xl mb-4 border border-solid border-gray-500 placeholder:text-gray-500 placeholder:pl-4"
                   required
                 />
                 <input
                   type="number"
                   placeholder="Event Fee"
-                  className="w-full bg-gray-50 text-black p-2 rounded-xl mb-4 border border-solid border-black placeholder:text-black"
+                  className="w-full bg-gray-50 text-gray-500 p-2 rounded-xl mb-4 border border-solid border-gray-500 placeholder:text-gray-500 placeholder:pl-4"
                   required
                 />
                 <button
                   type="submit"
-                  className="bg-yellow-400 text-black w-full p-2 rounded-xl hover:bg-yellow-500"
+                  className="bg-yellow-400 text-sm font-bold text-black w-full p-2 rounded-xl mt-7 hover:bg-yellow-500"
                 >
                   Post
                 </button>
@@ -135,7 +135,7 @@ const AddEventPage = () => {
                   {selectedFile ? (
                     <span className="text-gray-600">{selectedFile.name}</span>
                   ) : (
-                    <span className="text-black flex items-center justify-center">
+                    <span className="text-gray-500 flex items-center justify-center">
                       <ArrowUpTrayIcon className="w-5 h-5 mr-2" />
                       Upload image
                     </span>
@@ -169,10 +169,10 @@ const AddEventPage = () => {
                   <div>10000</div>
                 </p>
               </div>
-              <div>
+              <div className="mb-0">
                 <h2 className="font-bold mb-1">Join Team</h2>
                 <div className="py-4 pr-4 w-full flex gap-4">
-                  {["Dev-kings", "Code-m asters", "Design-heroes"].map(
+                  {["Dev-kings", "Code-masters", "Design-heroes"].map(
                     (team) => (
                       <TeamCard teamName={team} />
                     )
@@ -181,7 +181,7 @@ const AddEventPage = () => {
               </div>
               <button
                 type="submit"
-                className="bg-yellow-400 text-black w-full p-2 rounded-xl hover:bg-yellow-500"
+                className="bg-yellow-400 text-sm font-bold text-black w-full p-2 rounded-xl mt-3 hover:bg-yellow-500"
               >
                 Save
               </button>

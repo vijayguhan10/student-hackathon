@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { ChartBarIcon } from "@heroicons/react/24/outline";
-import { CalendarIcon } from "@heroicons/react/24/outline";
-import { Squares2X2Icon } from "@heroicons/react/24/outline";
-import { ArrowRightStartOnRectangleIcon } from "@heroicons/react/24/outline";
+import {
+  ChartBarIcon,
+  CalendarIcon,
+  Squares2X2Icon,
+  ArrowRightStartOnRectangleIcon,
+} from "@heroicons/react/24/outline";
 
 const Sidebar = () => (
   <aside className="bg-white text-gray w-64 fixed h-screen flex flex-col border-r-2 shadow-lg">
@@ -16,8 +18,8 @@ const Sidebar = () => (
             to="/dashboard"
             className={({ isActive }) =>
               isActive
-                ? "text-blue-600 border-l-4 border-blue-600 pl-3 pr-4 py-2 rounded flex items-center"
-                : "hover:text-blue-600 text-gray-500 px-4 py-2 rounded flex items-center"
+                ? "text-blue-600 border-l-4 text-sm font-bold border-blue-600 pl-3 pr-4 py-2 rounded flex items-center"
+                : "hover:text-blue-600 text-sm text-gray-500 px-4 py-2 rounded flex items-center"
             }
           >
             <Squares2X2Icon className="h-5 w-5 mr-2 ml-12" />
@@ -29,8 +31,8 @@ const Sidebar = () => (
             to="/events"
             className={({ isActive }) =>
               isActive
-                ? "text-blue-600 border-l-4 border-blue-600 pl-3 pr-4 py-2 rounded flex items-center"
-                : "hover:text-blue-600 text-gray-500 px-4 py-2 rounded flex items-center"
+                ? "text-blue-600 border-l-4 text-sm font-bold border-blue-600 pl-3 pr-4 py-2 rounded flex items-center"
+                : "hover:text-blue-600 text-sm text-gray-500 px-4 py-2 rounded flex items-center"
             }
           >
             <CalendarIcon className="h-5 w-5 mr-2 ml-12" />
@@ -42,8 +44,8 @@ const Sidebar = () => (
             to="/reports"
             className={({ isActive }) =>
               isActive
-                ? "text-blue-600 border-l-4 border-blue-600 pl-3 pr-4 py-2 rounded flex items-center"
-                : "hover:text-blue-600 text-gray-500 px-4 py-2 rounded flex items-center"
+                ? "text-blue-600 border-l-4 text-sm font-bold border-blue-600 pl-3 pr-4 py-2 rounded flex items-center"
+                : "hover:text-blue-600 text-sm text-gray-500 px-4 py-2 rounded flex items-center"
             }
           >
             <ChartBarIcon className="h-5 w-5 mr-2 ml-12" />
