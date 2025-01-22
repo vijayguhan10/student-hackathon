@@ -11,7 +11,7 @@ const DashboardPage = () => (
         <div className="grid grid-cols-2 gap-6">
           <div className="col-span-1 bg-white p-6 shadow rounded-3xl">
             <img
-              src="/path-to-main-event-thumbnail.png"
+              src="/assets/thumb1.jpg"
               alt="Event"
               className="w-full h-64 object-cover rounded-md"
             />

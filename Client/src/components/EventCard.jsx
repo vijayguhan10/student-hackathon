@@ -3,7 +3,7 @@ import { MapPinIcon } from "@heroicons/react/24/outline";
 const EventCard = ({ title, description, location, fee }) => (
   <div className="bg-white p-4 shadow rounded-2xl">
     <img
-      src="/path-to-thumbnail.png"
+      src="/assets/thumb2.jpg"
       alt="Event Thumbnail"
       className="w-full h-32 object-cover rounded-md"
     />

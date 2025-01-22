@@ -1,7 +1,7 @@
 const ReportCard = ({ title, description, attendees }) => (
   <div className="bg-white p-4 shadow rounded-xl">
     <img
-      src="/path-to-thumbnail.png"
+      src="/assets/thumb3.jpg"
       alt="Event Thumbnail"
       className="w-full h-32 object-cover rounded-md"
     />
