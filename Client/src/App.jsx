@@ -7,7 +7,7 @@ const App = () => {
   const location = useLocation();
   const isHomePageOrSignup =
     location.pathname === "/" || location.pathname === "/signup";
-
+  console.log("Removed the Node modules");
   return (
     <div className="font-Comfortaa w-full ">
       {!isHomePageOrSignup && <Sidebar />}
