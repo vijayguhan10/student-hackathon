@@ -1,64 +1,117 @@
-import { NavLink } from "react-router-dom";
+import React from "react";
 import {
-  ChartBarIcon,
-  CalendarIcon,
-  Squares2X2Icon,
-  ArrowRightStartOnRectangleIcon,
-} from "@heroicons/react/24/outline";
+  FiMenu,
+  FiBell,
+  FiSettings,
+  FiGrid,
+  FiPlus,
+  FiInfo,
+  FiLayers,
+  FiUsers,
+  FiPauseCircle,
+  FiUser,
+} from "react-icons/fi";
+import { CalendarDays } from "lucide-react";
+//using the Calender UI inorder to show the Ui of the Events
+import { useNavigate } from "react-router-dom";
+const SideBar = () => {
+  const navigate = useNavigate();
+  return (
+    <div className="flex bg-[#ffffff]">
+      {/* Sidebar */}
+      <div className="fixed left-0 top-0 h-full w-20 bg-[#ffffff] ">
+        <div className="p-4">
+          <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+            <FiGrid className="text-white text-xl" title="Dashboard" />
+          </div>
+        </div>
+        <div className="mt-8">
+          <div
+            className="w-full h-10 bg-blue-50= border-blue-500 flex items-center justify-center"
+            title="Active Dashboard"
+          >
+            <FiGrid className="text-blue-500 text-xl" />
+          </div>
+          <div className="w-full h-10 flex items-center justify-center mt-4">
+            <FiPlus
+              onClick={() => navigate("/forms")}
+              className="text-gray-500 text-xl"
+              title="Add New"
+            />
+          </div>
+          <div className="w-full h-10 flex items-center justify-center mt-4">
+            <CalendarDays
+              onClick={() => navigate("/calender")}
+              className="text-gray-500 text-xl"
+              title="Information"
+            />
+          </div>
+          <div className="w-full h-10 flex items-center justify-center mt-4">
+            <FiLayers className="text-gray-500 text-xl" title="Layers" />
+          </div>
+          <div className="w-full h-10 flex items-center justify-center mt-4">
+            <FiUsers className="text-gray-500 text-xl" title="Users" />
+          </div>
+        </div>
+        <div className="absolute bottom-4 left-0 w-full flex justify-center">
+          <img
+            src="https://www.mithreshvar.tech/_next/image?url=%2FlogoShort%2Flogo.png&w=64&q=75"
+            alt="User Avatar"
+            className="w-32 h-16 rounded-full"
+            title="User Profile"
+          />
+        </div>
+      </div>
 
-const Sidebar = () => (
-  <aside className="bg-white text-gray w-64 fixed h-screen flex flex-col border-r-2 shadow-lg">
-    <div className="pt-4 ml-10">
-      <img src="/logo.webp" alt="logo" className="w-33 h-auto " />
-    </div>
-    <nav className="flex-1 pt-8">
-      <ul className="space-y-2 p-0">
-        <li>
-          <NavLink
-            to="/dashboard"
-            className={({ isActive }) =>
-              isActive
-                ? "text-blue-600 border-l-4 text-sm font-bold border-blue-600 pl-3 pr-4 py-2 rounded flex items-center"
-                : "hover:text-blue-600 text-sm text-gray-500 px-4 py-2 rounded flex items-center"
-            }
-          >
-            <Squares2X2Icon className="h-5 w-5 mr-2 ml-12" />
-            Dashboard
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/events"
-            className={({ isActive }) =>
-              isActive
-                ? "text-blue-600 border-l-4 text-sm font-bold border-blue-600 pl-3 pr-4 py-2 rounded flex items-center"
-                : "hover:text-blue-600 text-sm text-gray-500 px-4 py-2 rounded flex items-center"
-            }
-          >
-            <CalendarIcon className="h-5 w-5 mr-2 ml-12" />
-            Events
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/reports"
-            className={({ isActive }) =>
-              isActive
-                ? "text-blue-600 border-l-4 text-sm font-bold border-blue-600 pl-3 pr-4 py-2 rounded flex items-center"
-                : "hover:text-blue-600 text-sm text-gray-500 px-4 py-2 rounded flex items-center"
-            }
-          >
-            <ChartBarIcon className="h-5 w-5 mr-2 ml-12" />
-            Reports
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
-    <div className="flex justify-center items-center p-4">
-      <ArrowRightStartOnRectangleIcon className="h-5 w-5 items-center text-red-500" />
-      <button className="py-10 ml-2 justify-center text-red-500">Logout</button>
-    </div>
-  </aside>
-);
+      <div className="ml-20 rounded-l-3xl w-full pl-6 p-4">
+        <div className="flex justify-between items-center">
+          {/* Left Side */}
+          <div className="flex items-center">
+            <FiMenu className="text-gray-400 mr-4 text-2xl" title="Menu" />
+            <div>
+              <div className="flex items-center gap-2">
+                <p className="text-gray-600 font-bold">
+                  Good evening,{" "}
+                  <span className="text-blue-500 font-bold">Vijay Guhan</span>
+                </p>
+                <span className="bg-green-100 font-bold text-green-600 text-xs px-2 py-1 rounded">
+                  You're better than this!
+                </span>
+              </div>
+            </div>
+          </div>
 
-export default Sidebar;
+          {/* Right Side */}
+          <div className="flex items-center mr-16 gap-6">
+            <FiBell className="text-gray-400 text-2xl" title="Notifications" />
+            <FiSettings className="text-gray-400 text-2xl" title="Settings" />
+            <div className="flex items-center gap-2">
+              <div
+                className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center"
+                title="Avatar"
+              >
+                <FiUser onClick={()=>navigate('/profile')} className="text-gray-600" />
+              </div>
+              <svg
+                className="w-5 h-5 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                title="Expand"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SideBar;

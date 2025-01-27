@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header from "./components/Header";
 import TeamCard from "./components/TeamCard";
 import {
   ArrowUpTrayIcon,
@@ -30,7 +29,6 @@ const AddEventPage = () => {
   return (
     <div className="flex h-screen">
       <main className="flex-grow bg-gray-100">
-        <Header />
         <div className="px-10 py-5">
           <div className="grid grid-cols-2 gap-6">
             <div className="bg-white p-6 shadow rounded-3xl">

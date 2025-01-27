@@ -1,11 +1,9 @@
-import Header from "./components/Header";
 import EventCard from "./components/EventCard";
 import { Link } from "react-router-dom";
 
 const EventsPage = () => (
   <div className="flex h-screen">
     <main className="flex-grow bg-gray-100">
-      <Header title="Events" />
       <div className="px-10 py-8">
         <div className="flex space-x-4 mb-8">
           <Link to="/events/addevent">
