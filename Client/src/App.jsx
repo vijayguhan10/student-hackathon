@@ -1,23 +1,27 @@
 import React from "react";
-import "./App.css";
-import ReportsPage from "./ReportsPage";
-import AddEventPage from "./AddEventPage";
-import DashboardPage from "./DashBoardPage";
-import EventsPage from "./EventsPage";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "./components/Layout";
+import { useLocation } from "react-router-dom";
+import InitialRouter from "./Router/InitialRouter";
+import Sidebar from "./components/SideBar";
 
-const App = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route path="dashboard" element={<DashboardPage />} />
-        <Route path="events" element={<EventsPage />} />
-        <Route path="reports" element={<ReportsPage />} />
-        <Route path="events/addevent" element={<AddEventPage />} />
-      </Route>
-    </Routes>
-  </BrowserRouter>
-);
+const App = () => {
+  const location = useLocation();
+  const isHomePageOrSignup =
+    location.pathname === "/" || location.pathname === "/signup";
+  console.log("Removed the Node modules");
+  return (
+    <div className="font-Comfortaa w-full ">
+      {!isHomePageOrSignup && <Sidebar />}
+      <div className={isHomePageOrSignup ? "w-full" : ""}>
+        {!isHomePageOrSignup ? (
+          <div className="ml-24 mr-5">
+            <InitialRouter />
+          </div>
+        ) : (
+          <InitialRouter />
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default App;

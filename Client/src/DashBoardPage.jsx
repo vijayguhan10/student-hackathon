@@ -1,14 +1,12 @@
-import Header from "./components/Header";
 import EventCard from "./components/EventCard";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 
 const DashboardPage = () => (
-  <div className="flex h-screen">
-    <main className="flex-grow bg-gray-100">
-      <Header title="Events" />
-      <div className="py-6 px-10">
-        <button className="mb-4 text-gray-500"><div className="flex items-center gap-2"><ArrowLeftIcon className="w-5 h-5"/> Back</div></button>
-        <div className="grid grid-cols-2 gap-6">
+  <div className="rounded-l-3xl">
+    <main className=" rounded-l-3xl">
+      <div className="py-6 rounded-l-3xl px">
+        
+        <div className="grid grid-cols-2  gap-6">
           <div className="col-span-1 bg-white p-6 shadow rounded-3xl">
             <img
               src="/assets/thumb1.jpg"
