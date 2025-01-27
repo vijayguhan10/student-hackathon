@@ -1,1 +1,1 @@
-console.log("new ")
+console.log('backend connected successfully');
