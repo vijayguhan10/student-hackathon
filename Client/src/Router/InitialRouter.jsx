@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "../components/Layout";
 import HomePage from "../components/HomePage";
 import Signup from "../components/Signups";
+console.log("$$$");
 import Profile from "../Profile/Profile";
 const InitialRouter = () => (
   <Routes>
